@@ -1,5 +1,5 @@
-import { Typography } from "@mui/material";
-import Rating from "@mui/material/Rating";
+// import { Typography } from "@mui/material";
+// import Rating from "@mui/material/Rating";
 import { distance, point } from "@turf/turf";
 import { BurgerCardStoryScroll } from "./BurgerCardStoryScroll";
 import { BurgerCardTextBox } from "./BurgerCardTextBox";
