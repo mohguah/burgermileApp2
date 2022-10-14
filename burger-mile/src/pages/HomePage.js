@@ -1,27 +1,31 @@
 import { NavLink } from 'react-router-dom'
 import './HomePage.scss'
 import burgerimage from '../assets/BurgermileLogo.png'
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import { dataList } from "../assets/data.js";
+import BurgerCard from '../components/BurgerCard';
 
 const HomePage = () => {
     const responsive = {
         superLargeDesktop: {
-          // the naming can be any, depends on you.
-          breakpoint: { max: 4000, min: 3000 },
-          items: 5,
+            // the naming can be any, depends on you.
+            breakpoint: { max: 4000, min: 3000 },
+            items: 5,
         },
         desktop: {
-          breakpoint: { max: 3000, min: 1024 },
-          items: 3,
+            breakpoint: { max: 3000, min: 1024 },
+            items: 3,
         },
         tablet: {
-          breakpoint: { max: 1024, min: 464 },
-          items: 2,
+            breakpoint: { max: 1024, min: 464 },
+            items: 2,
         },
         mobile: {
-          breakpoint: { max: 464, min: 0 },
-          items: 1,
+            breakpoint: { max: 464, min: 0 },
+            items: 1,
         },
-      };
+    };
 
     return (
         <div>
@@ -45,12 +49,40 @@ const HomePage = () => {
             </div>
             <div style={{ margin: '10px' }}>
                 <h2>Some of our burger ratings</h2>
-                <Carousel responsive={responsive}>
-
+                <Carousel
+                    ssr
+                    partialVisbile
+                    itemClass='image-item'
+                    responsive={responsive}
+                    swipeable={true}
+                >
+                    {dataList.slice(0, 5).map((burgercard) => {
+                        return (
+                            <div onClick={() => console('hehehehe')} style={{ cursor: 'pointer' }}>
+                                <BurgerCard
+                                    Name={burgercard.Name}
+                                    img={burgercard.img}
+                                    Price={burgercard.Price}
+                                    Food={burgercard.Food}
+                                    Atmosphere={burgercard.Atmosphere}
+                                    It_factor={burgercard["It-factor"]}
+                                    LatLng={burgercard.LatLng}
+                                    Adress={""}
+                                    City={""}
+                                    Average={0}
+                                    Average_weighted={burgercard["Average weighted"]}
+                                    Gourmet_or_Joint={""}
+                                    Year={0}
+                                    id={burgercard.id}
+                                    currentPosition={undefined}
+                                />
+                            </div>
+                        );
+                    })}
                 </Carousel>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default HomePage
