@@ -1,12 +1,14 @@
 import { Route, Routes } from "react-router-dom";
-
+import HomePage from "../pages/HomePage";
+import Layout from "./Layout";
+// import { pages } from '../pages/pages';
 
 function RoutesMapper() {
     return (
         <Routes>
-            {pages.map((p) => (
-                <Route key={p.name} path={p.path} element={<p.component />} />
-            ))}
+            <Route path='/' element={<Layout />}>
+                <Route index element={<HomePage />} />
+            </Route>
         </Routes>
     );
 }

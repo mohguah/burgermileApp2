@@ -1,14 +1,18 @@
-import { BrowserRouter, Routes } from 'react-router-dom';
+import React from 'react';
+// import NavBar from '../components/NavBar';
+import RoutesMapper from './Routes';
+import { BrowserRouter } from 'react-router-dom';
 import './App.scss';
 
 function App() {
   return (
+
     <BrowserRouter>
-      <div className='page'>
-        <Navbar />
-        <Routes />
+      <div>
+        <RoutesMapper />
       </div>
     </BrowserRouter>
+
   );
 }
 
