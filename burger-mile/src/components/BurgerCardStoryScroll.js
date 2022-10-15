@@ -1,9 +1,9 @@
 import { Rating, Typography } from '@mui/material';
-import './BurgerCardTextBox.scss';
+import './BurgerCardStoryScroll.scss';
 
-const BurgerCardTextBox = (props) => {
+const BurgerCardStoryScroll = (props) => {
     return (
-        <div className='box'>
+        <div className='card-container'>
             <Typography variant='h4'>{props.Name}</Typography>
             <Typography>
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
@@ -27,7 +27,7 @@ const BurgerCardTextBox = (props) => {
                 <Rating value={props.It_factor} readOnly max={6} />
             </div>
         </div>
-    );
+    )
 }
 
-export default BurgerCardTextBox
+export default BurgerCardStoryScroll
