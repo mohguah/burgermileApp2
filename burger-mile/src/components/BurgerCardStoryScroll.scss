@@ -1,0 +1,13 @@
+.box {
+    margin: 5px;
+    height: 250px;
+
+    :first-child {
+        text-align: left;
+    }
+    
+    .rating-holder {
+        display: flex;
+        flex-direction: row;
+    }
+}

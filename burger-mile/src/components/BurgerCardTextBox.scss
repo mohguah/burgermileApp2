@@ -1,0 +1,9 @@
+.box {
+    margin: 5px;
+    height: 250px;
+    
+    .rating-holder {
+        display: flex;
+        flex-direction: row;
+    }
+}

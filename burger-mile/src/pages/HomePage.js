@@ -4,7 +4,8 @@ import burgerimage from '../assets/BurgermileLogo.png'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { dataList } from "../assets/data.js";
-import BurgerCard2 from '../components/BurgerCard2';
+import BurgerCard from '../components/BurgerCard';
+import { Typography } from '@mui/material';
 
 const HomePage = () => {
     const responsive = {
@@ -28,27 +29,29 @@ const HomePage = () => {
     };
 
     return (
-        <div>
+        <div className='page'>
             <div>
-                <h3>Welcome to Burgermile</h3>
-                <h3>The place you find burger ratings</h3>
+                <Typography variant='h3'>Welcome to Burgermile</Typography>
+                <Typography variant='h3'>The place you find burger ratings</Typography>
             </div>
-            <div>
-                <div>
-                    <h5>What is Burgermile?</h5>
-                    <p>
+            <div className='bread-container'>
+                <div className='bread'>
+                    <Typography variant='h5'>What is Burgermile?</Typography>
+                    <Typography>
                         Burgermile is a place where you get burger ratings of selected
                         restaurants.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.F
-                    </p>
+                    </Typography>
                     <NavLink className='nav-link' to='/about'>Read More</NavLink>
                 </div>
-                <div className='grid-container'>
+                <div className='image-container'>
                     <img src={burgerimage} alt='burgerimage' />
                 </div>
             </div>
             <div style={{ margin: '10px' }}>
-                <h2>Some of our burger ratings</h2>
+                <div style={{ margin: '10px' }}>
+                    <Typography variant='h5'>Some of our burger ratings</Typography>
+                </div>
                 <Carousel
                     ssr
                     partialVisbile
@@ -59,7 +62,7 @@ const HomePage = () => {
                     {dataList.slice(0, 5).map((burgercard) => {
                         return (
                             <div onClick={() => console('hehehehe')} style={{ cursor: 'pointer' }}>
-                                <BurgerCard2
+                                <BurgerCard
                                     Name={burgercard.Name}
                                     img={burgercard.img}
                                     Price={burgercard.Price}
@@ -74,7 +77,7 @@ const HomePage = () => {
                                     // Gourmet_or_Joint={""}
                                     // Year={0}
                                     id={burgercard.id}
-                                    // currentPosition={undefined}
+                                // currentPosition={undefined}
                                 />
                             </div>
                         );
