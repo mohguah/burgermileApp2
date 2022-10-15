@@ -4,7 +4,7 @@ import burgerimage from '../assets/BurgermileLogo.png'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { dataList } from "../assets/data.js";
-import BurgerCard from '../components/BurgerCard';
+import BurgerCard2 from '../components/BurgerCard2';
 
 const HomePage = () => {
     const responsive = {
@@ -59,22 +59,22 @@ const HomePage = () => {
                     {dataList.slice(0, 5).map((burgercard) => {
                         return (
                             <div onClick={() => console('hehehehe')} style={{ cursor: 'pointer' }}>
-                                <BurgerCard
+                                <BurgerCard2
                                     Name={burgercard.Name}
                                     img={burgercard.img}
                                     Price={burgercard.Price}
                                     Food={burgercard.Food}
                                     Atmosphere={burgercard.Atmosphere}
                                     It_factor={burgercard["It-factor"]}
-                                    LatLng={burgercard.LatLng}
+                                    // LatLng={burgercard.LatLng}
                                     Adress={""}
                                     City={""}
-                                    Average={0}
-                                    Average_weighted={burgercard["Average weighted"]}
-                                    Gourmet_or_Joint={""}
-                                    Year={0}
+                                    // Average={0}
+                                    // Average_weighted={burgercard["Average weighted"]}
+                                    // Gourmet_or_Joint={""}
+                                    // Year={0}
                                     id={burgercard.id}
-                                    currentPosition={undefined}
+                                    // currentPosition={undefined}
                                 />
                             </div>
                         );

@@ -1,7 +1,7 @@
 // import { distance, point } from '@turf/turf';
 // import './BurgerCard.scss';
 
-// interface burgerCardProps {
+// type burgerCardProps {
 //     Name: string;
 //     Adress: string;
 //     City: string;
