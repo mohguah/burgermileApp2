@@ -3,7 +3,7 @@ import './BurgerCard.scss';
 import BurgerCardTextBox from './BurgerCardTextBox';
 import BurgerCardStoryScroll from './BurgerCardStoryScroll';
 
-const BurgerCard2 = (props) => {
+const BurgerCard = (props) => {
 
     // function getDistanceToRestaurant(currentPosition, latlngRestaurant) {
     //     if (!currentPosition) return 0;
@@ -27,4 +27,4 @@ const BurgerCard2 = (props) => {
     );
 };
 
-export default BurgerCard2
+export default BurgerCard
