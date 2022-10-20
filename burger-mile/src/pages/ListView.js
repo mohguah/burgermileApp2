@@ -1,4 +1,4 @@
-import { Modal } from '@mui/material';
+import { Box, Modal } from '@mui/material';
 import { useState } from 'react';
 import BurgerCard from '../components/BurgerCard';
 import './ListView.scss';
@@ -19,10 +19,9 @@ const ListView = () => {
 
     return (
         <div className='container'>
-            <h1>Hello</h1>
             {/* <Sidebar burgerList={dataList} /> */}
             <div className='main-page'>
-                {DataTransferItemList.map((burgercard) => (
+                {dataList.map((burgercard) => (
                     <div
                         key={burgercard.id}
                         style={{ cursor: "pointer" }}
