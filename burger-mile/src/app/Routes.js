@@ -1,3 +1,4 @@
+import { Switch } from "@mui/material";
 import { Route, Routes } from "react-router-dom";
 import HomePage from "../pages/HomePage";
 import ListView from "../pages/ListView";
@@ -7,11 +8,11 @@ import Layout from "./Layout";
 function RoutesMapper() {
     return (
         <Routes>
-            <Route path='/' element={<Layout />}>
-                <Route index element={<HomePage />} />
-                <Route path='list' element={<ListView />} />
-                <Route path='map' element={<Store />} />
-            </Route>
+
+            <Route exact path="/" element={<HomePage />} />
+            <Route path='list' element={<ListView />} />
+            <Route path='map' element={<Store />} />
+
         </Routes>
     );
 }

@@ -20,7 +20,7 @@ const ListView = () => {
     return (
         <div className='container'>
             <h1>Hello</h1>
-            <Sidebar burgerList={dataList} />
+            {/* <Sidebar burgerList={dataList} /> */}
             <div className='main-page'>
                 {DataTransferItemList.map((burgercard) => (
                     <div
@@ -66,7 +66,7 @@ const ListView = () => {
                     </div>
                 ))}
             </div>
-            {/* {currentBurgercard && (
+            {currentBurgerCard && (
                 <Modal
                     open={open}
                     onClose={handleClose}
@@ -74,24 +74,24 @@ const ListView = () => {
                     aria-describedby="modal-modal-description"
                 >
                     <BurgerCardModal
-                        Name={currentBurgercard.Name}
-                        img={currentBurgercard.img}
-                        Price={currentBurgercard.Price}
-                        Food={currentBurgercard.Food}
-                        Atmosphere={currentBurgercard.Atmosphere}
-                        It_factor={currentBurgercard["It_factor"]}
+                        Name={currentBurgerCard.Name}
+                        img={currentBurgerCard.img}
+                        Price={currentBurgerCard.Price}
+                        Food={currentBurgerCard.Food}
+                        Atmosphere={currentBurgerCard.Atmosphere}
+                        It_factor={currentBurgerCard["It_factor"]}
                         // currentPosition={currentPostionUser!}
-                        LatLng={currentBurgercard.LatLng}
+                        LatLng={currentBurgerCard.LatLng}
                         Adress={""}
                         City={""}
                         Average={0}
-                        Average_weighted={currentBurgercard["Average_weighted"]}
+                        Average_weighted={currentBurgerCard["Average_weighted"]}
                         Gourmet_or_Joint={""}
                         Year={0}
-                        id={currentBurgercard.id}
+                        id={currentBurgerCard.id}
                     />
                 </Modal>
-            )} */}
+            )}
         </div>
     )
 }
