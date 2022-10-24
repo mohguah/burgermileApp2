@@ -1,4 +1,4 @@
-import { Box, Modal } from '@mui/material';
+import { Modal } from '@mui/material';
 import { useState } from 'react';
 import BurgerCard from '../components/BurgerCard';
 import './ListView.scss';
