@@ -1,24 +1,25 @@
+import './ProductDisplay.scss';
 
-
-const ProductDisplay = () => {
+const ProductDisplay = (props) => {
+	// const {id, imageUrl, name, description, price} = props
 	return (
 		<>
-			<div key={id} className={"product"}>
+			<div key={props.id} className={"product"}>
 				<img
-					src={imageUrl}
-					alt={`Image of ${name}`}
+					src={props.imageUrl}
+					alt={`Image of ${props.name}`}
 					className={'image-product'}
 				/>
-				<h3>{name}</h3>
-				<p>{description}</p>
-				<span>${price}</span>
+				<h3>{props.name}</h3>
+				<p>{props.description}</p>
+				<span>${props.price}</span>
 				<form action="/create-checkout-session" method="POST">
 					<button
 						className="stripe-add-item"
-						data-item-id={id}
-						data-item-image={imageUrl}
-						data-item-name={name}
-						data-item-price={price}
+						data-item-id={props.id}
+						data-item-image={props.imageUrl}
+						data-item-name={props.name}
+						data-item-price={props.price}
 						data-item-url="/"
 					>
 						Add to cart
@@ -26,8 +27,8 @@ const ProductDisplay = () => {
 				</form>
 			</div>
 
-			<section>
-				<div className="product">
+			{/* <section>
+				<div className="checkout">
 					<img
 						src="https://i.imgur.com/EHyR2nP.png"
 						alt="The cover of Stubborn Attachments"
@@ -42,7 +43,7 @@ const ProductDisplay = () => {
 						Checkout
 					</button>
 				</form>
-			</section>
+			</section> */}
 		</>
 	);
 }

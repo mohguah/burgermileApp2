@@ -1,7 +1,6 @@
-import { distance, point } from '@turf/turf';
+// import { distance, point } from '@turf/turf';
 import './BurgerCard.scss';
-import BurgerCardTextBox from './BurgerCardTextBox';
-import BurgerCardStoryScroll from './BurgerCardStoryScroll';
+import BurgerText from './BurgerText';
 
 const BurgerCard = (props) => {
 
@@ -15,7 +14,7 @@ const BurgerCard = (props) => {
     return (
         <div className='card-container'>
             <img src={props.img} alt='burgerlogo' />
-            <BurgerCardStoryScroll
+            <BurgerText
                 title={props.Name}
                 price={props.Price}
                 food={props.Food}

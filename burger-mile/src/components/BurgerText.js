@@ -1,5 +1,5 @@
 import { Box, Rating, Typography } from '@mui/material';
-import './BurgerCardStoryScroll.scss';
+import './BurgerText.scss';
 
 const BurgerCardStoryScroll = (props) => {
     return (

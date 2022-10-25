@@ -1,5 +1,7 @@
 import ProductDisplay from '../components/ProductDisplay';
 import { useEffect, useState } from "react";
+import productList from '../assets/products.json';
+
 import './Store.scss';
 
 const Message = ({ message }) => (
@@ -29,10 +31,23 @@ const Store = () => {
     return message ? (
         <Message message={message} />
     ) : (
-        <ProductDisplay />
+        {
+            productList.map((product) => (
+                <div key={product.id}>
+                    <ProductDisplay
+                        Name={product.Name}
+                        Description={product.Description}
+                        Price={product.Price}
+                        ImageUrl={product.ImageUrl}
+                        Id={product.Id}
+                    >
+                    </ProductDisplay>
+                </div>
+            )}
     );
 }
 
+//             products.map((product) => <ProductDisplay {...product} key={i} />)
 
 
 export default Store
