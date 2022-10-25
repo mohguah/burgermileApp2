@@ -5,29 +5,27 @@ server.py
 Stripe Sample.
 Python 3.6 or newer required.
 """
-
-from core import app
-
 from itertools import product
 from locale import currency
 import os
 from flask import Flask, redirect, request
 
 import stripe
-# This is a public sample test API key.
-# Don’t submit any personally identifiable information in requests made with this key.
-# Sign in to see your own test API key embedded in code samples.
+# This is your test secret API key.
 stripe.api_key = 'sk_test_51LsUfGCpUbUMkUvohMy9I5yYVldD0sPXiK3bu7IKb5ych41AnqxHQOcWzTVVq8zB6K3yiM7SkOdNK0LD8QNwppdN00094VN0s6'
 
-myDomain = 'http://localhost:4242'
+app = Flask(__name__,
+            static_url_path='',
+            static_folder='public')
 
-peisestua = stripe.Product.create(name="Peisestua, 1 natt")
+MY_DOMAIN = 'http://localhost:4242'
+
+burgermerch1 = stripe.Product.create(name='burgermerch1')
 
 price = stripe.Price.create(
-    unit_amount=140000,
-    currency="nok", 
-    product=peisestua
-)
+    unit_amount=15000,
+    currency="nok",
+    product=burgermerch1)
 
 @app.route('/create-checkout-session', methods=['POST'])
 def create_checkout_session():
@@ -41,8 +39,8 @@ def create_checkout_session():
                 },
             ],
             mode='payment',
-            success_url=myDomain + '?success=true',
-            cancel_url=myDomain + '?canceled=true',
+            success_url=MY_DOMAIN + '?success=true',
+            cancel_url=MY_DOMAIN + '?canceled=true',
         )
     except Exception as e:
         return str(e)
@@ -51,4 +49,3 @@ def create_checkout_session():
 
 if __name__ == '__main__':
     app.run(port=4242)
-
