@@ -10,7 +10,7 @@ import Catering from '../pages/Catering';
 import About from '../pages/About';
 
 function App() {
-  return ( 
+  return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>

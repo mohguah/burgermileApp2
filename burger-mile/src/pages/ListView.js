@@ -18,12 +18,12 @@ const ListView = () => {
 	const handleClose = () => setOpen(false);
 
 	return (
-		<div className='container'>
+		<div className='list-container'>
 			{/* <Sidebar burgerList={dataList} /> */}
-			<div className='main-page'>
-				{dataList.map((burgercard) => (
+			<div className='list-main'>
+				{dataList.map((burgercard, i) => (
 					<div
-						key={burgercard.id}
+						key={i}
 						style={{ cursor: "pointer" }}
 						onClick={() =>
 							handleOpen({
@@ -33,6 +33,7 @@ const ListView = () => {
 								Price: burgercard.Price,
 								Food: burgercard.Food,
 								Atmosphere: burgercard.Atmosphere,
+
 								It_factor: burgercard["It-factor"],
 								Average: 0,
 								Average_weighted: burgercard["Average weighted"],
