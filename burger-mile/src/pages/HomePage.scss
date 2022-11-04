@@ -1,33 +1,88 @@
-.page {
+body {
+    overflow: hidden;
+}
+
+h3 {
+    font-family: 'Coolvetica';
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.para-0 {
+    background-image: linear-gradient(135deg, var(--dark), var(--darker));
     height: 100%;
     width: 100%;
+}
 
-    // background-image: url('../assets/burger-image1.jpg');
-    // background-size: cover;
+.para-bg-1 {
+    background-image: linear-gradient(135deg, var(--orangeL), var(--orangeD));
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
+}
+
+.para-tomato {
+    img {
+        position: absolute;
+        height: 140%;
+        right: -680px;
+        top: 1000px;
+        transform: rotate(-70deg);
+    }
+}
+
+// .para-salad {
+//     img {
+//         position: absolute;
+//         height: 120%;
+//         left: -500px;
+//         top: 1000px;
+//         transform: rotate(75deg);
+//     }
+// }
+
+.para-1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+
 
     .bread-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        grid-auto-rows: minmax(100px, auto);
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    .bread {
+        display: inline;
+        // font-family: 'Helvetica neue';
+        font-size: 110%;
+        width: 50%;
         margin: 50px;
 
-        .bread {
-            grid-column: '1/2';
-            grid-row: 1;
-            text-align: center;
-            align-items: center;
-
-            .nav-link {
-                color: orange;
-                text-decoration: none;
-            }
-        }
-
-        .image-container {
-            grid-column: 2/2;
-            grid-row: 1;
-            justify-self: center;
+        .nav-link {
+            // color: orange;
+            text-decoration: none;
         }
     }
 }
+
+.para-2 {
+    position: relative;
+    top: 20%;
+}
+
+// .bread-container {
+//     // display: flex;
+//     // flex-direction: column;
+//     // grid-template-columns: repeat(2, 1fr);
+//     // gap: 10px;
+//     // grid-auto-rows: minmax(100px, auto);
+//     margin: 50px;
+
+//     .image-container {
+//         grid-column: 2/2;
+//         grid-row: 1;
+//         justify-self: center;
+//     }
+// }

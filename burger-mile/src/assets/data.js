@@ -1,4 +1,4 @@
-import burgerimage from "./BurgermileLogo.png";
+import burgerimage from "./svgs/burger.svg";
 
 export const dataList = [
   {

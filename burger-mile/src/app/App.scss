@@ -16,6 +16,14 @@ $primary-color: #e08619;
   font-family: 'Coolvetica';
   src: url(../assets/fonts/CoolveticaRg-Regular.woff2) format('woff2');
 }
+@font-face {
+  font-family: 'RedHand';
+  src: url(../assets/fonts/KGRedHands.ttf) format('ttf');
+}
+@font-face {
+  font-family: 'LemonMilk';
+  src: url(../assets/fonts/LEMONMILK-Medium.otf) format('otf');
+}
 
 input, 
 textarea {

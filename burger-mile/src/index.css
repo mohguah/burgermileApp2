@@ -13,5 +13,12 @@ code {
 }
 
 :root {
-  height: 100vh;
+  --orangeD: #e76f51;
+  --orangeM: #F4A261;
+  --orangeL: #E9C46A;
+  --azure: #2A9D8F;
+  --dark: #264654;
+  --darker: #131a26;
+  --grey: #777;
+  --light: #eee;
 }

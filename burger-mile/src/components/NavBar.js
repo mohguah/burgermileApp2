@@ -1,4 +1,4 @@
-import burgericon from '../assets/BurgermileLogo.png';
+import burgericon from '../assets/svgs/burger.svg';
 import { NavLink } from 'react-router-dom';
 import './NavBar.scss';
 
