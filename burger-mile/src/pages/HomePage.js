@@ -8,7 +8,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { dataList } from "../assets/data.js";
 import BurgerCard from '../components/BurgerCard';
-import { Typography } from '@mui/material';
+import { Hidden, Typography } from '@mui/material';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
 const HomePage = () => {

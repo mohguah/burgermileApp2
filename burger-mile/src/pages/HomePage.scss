@@ -1,4 +1,6 @@
-body {
+
+
+.para-container {
     overflow: hidden;
 }
 
@@ -71,18 +73,3 @@ h3 {
     position: relative;
     top: 20%;
 }
-
-// .bread-container {
-//     // display: flex;
-//     // flex-direction: column;
-//     // grid-template-columns: repeat(2, 1fr);
-//     // gap: 10px;
-//     // grid-auto-rows: minmax(100px, auto);
-//     margin: 50px;
-
-//     .image-container {
-//         grid-column: 2/2;
-//         grid-row: 1;
-//         justify-self: center;
-//     }
-// }
