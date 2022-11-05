@@ -1,6 +1,6 @@
 import ProductDisplay from '../components/ProductDisplay';
 import { useEffect, useState } from "react";
-import productList from '../assets/products.json';
+import { productList } from '../assets/products.js';
 
 import './Store.scss';
 
