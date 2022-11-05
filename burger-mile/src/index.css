@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  overflow: hidden;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -12,6 +13,36 @@ code {
     monospace;
 }
 
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url(./assets/fonts/helvetica-neu.ttf) format('ttf');
+}
+@font-face {
+  font-family: 'La Belle Aurore';
+  src: url(./assets/fonts/LaBelleAurore.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Coolvetica';
+  src: url(./assets/fonts/CoolveticaRg-Regular.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'RedHands';
+  src: url(./assets/fonts/KGRedHands.woff) format('woff');
+}
+@font-face {
+  font-family: 'Foodlist Regular';
+  src: url(./assets/fonts/Foodlist-Regular.woff) format('woff');
+}
+@font-face {
+  font-family: 'Sans Anger';
+  src: url(./assets/fonts/SansAnger.ttf) format('ttf');
+}
+@font-face {
+  font-family: 'Danila';
+  src: url(./assets/fonts/Danila/Danila.ttf) format('ttf');
+}
+
+
 :root {
   --orangeD: #e76f51;
   --orangeM: #F4A261;
@@ -19,6 +50,7 @@ code {
   --azure: #2A9D8F;
   --dark: #264654;
   --darker: #131a26;
+  --blackboard: #222222;
   --grey: #777;
-  --light: #eee;
+  --light: ivory;
 }

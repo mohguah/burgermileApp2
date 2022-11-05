@@ -34,7 +34,7 @@ const HomePage = () => {
 
 	return (
 		<>
-			<Parallax pages={1.3} className='para-0'>
+			<Parallax pages={1.35} className='para-0'>
 				<ParallaxLayer offset={0} factor={2} speed={5} className='para-bg-1'>
 
 				</ParallaxLayer>
@@ -45,12 +45,12 @@ const HomePage = () => {
 					<img src={salad} alt='salad' />
 				</ParallaxLayer> */}
 				<ParallaxLayer offset={0} factor={0.7} speed={1} className='para-1'>
-					<div>
+					<div className='text-holder'>
 						<Typography variant='h3'>Welcome to Burgermile</Typography>
 						<Typography variant='h3'>The place you find burger ratings</Typography>
 					</div>
 					<div className='bread-container'>
-						<div className='bread'>
+						<div className='bread text-holder'>
 							<Typography variant='h4'>What is Burgermile?</Typography>
 							<p>
 								Burgermile is a place where you get burger ratings of selected
@@ -66,8 +66,8 @@ const HomePage = () => {
 				</ParallaxLayer>
 				<ParallaxLayer offset={0.6} factor={1} speed={1} className='para-2'>
 					<div style={{ margin: '10px' }}>
-						<div style={{ margin: '10px' }}>
-							<Typography variant='h3'>Some of our burger ratings</Typography>
+						<div className='text-holder'>
+							<Typography variant='h4'>Some of our burger ratings</Typography>
 						</div>
 						<Carousel
 							ssr

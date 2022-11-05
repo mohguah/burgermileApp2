@@ -1,6 +1,15 @@
 .box {
     margin: 5px;
     height: 250px;
+    font-family: 'Foodlist Regular', 'Sans Anger', 'Coolvetica', cursive;
+    position: relative;
+    top: -25px;
+
+    h4 {
+        font-family: 'Foodlist Regular', 'Sans Anger', 'Coolvetica', cursive;
+        font-size: 40px;
+    }
+
 
     :first-child {
         text-align: left;
@@ -11,3 +20,8 @@
         flex-direction: row;
     }
 }
+
+.box * {
+    justify-content: left;
+}
+
