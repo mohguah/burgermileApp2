@@ -6,6 +6,7 @@ env:
   SCREENER_API_KEY: ${{ secrets.SCREENER_API_KEY }}
   SOURCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
   SOURCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
+  process.env.CI = false
 
 on:
   push:

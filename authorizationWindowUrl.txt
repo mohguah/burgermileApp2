@@ -1,0 +1,30 @@
+https://api.instagram.com/oauth/authorize
+    ?client_id=818228076112882
+    &redirect_uri=https://mohguah.github.io/
+    &scope=user_profile,user_media
+    &response_type=code
+
+AQB570xOH_tz6yDcCC8W39C_BPpXjLn_0AlF87YxQYMmLdrBX1zT8rVGVBiNz6Ar9EXnvhWqE4uzcLhx9AZVOPrlyiqkDUt8--vh6sioKp4lJYAIMn3Z8ETc1Bh8S-zpH3xZssGFLa1ka8X1DxIprELUtl2r8jxI6jqpI43s7dNqbfyc5SeXq7QfNJAdxrNpq82T2AK4SQb7XzTm8xdg2iFnkkUOzroDo2eZLgd5IxXK4w
+
+curl -X POST 
+    https://api.instagram.com/oauth/access_token 
+    -F client_id=818228076112882 
+    -F client_secret=d92fd1b93582a958fdeeceff5926962b 
+    -F grant_type=authorization_code 
+    -F redirect_uri=https://mohguah.github.io/ 
+    -F code=AQB570xOH_tz6yDcCC8W39C_BPpXjLn_0AlF87YxQYMmLdrBX1zT8rVGVBiNz6Ar9EXnvhWqE4uzcLhx9AZVOPrlyiqkDUt8--vh6sioKp4lJYAIMn3Z8ETc1Bh8S-zpH3xZssGFLa1ka8X1DxIprELUtl2r8jxI6jqpI43s7dNqbfyc5SeXq7QfNJAdxrNpq82T2AK4SQb7XzTm8xdg2iFnkkUOzroDo2eZLgd5IxXK4w
+
+curl -X POST https://api.instagram.com/oauth/access_token -F client_id=818228076112882 -F client_secret=d92fd1b93582a958fdeeceff5926962b -F grant_type=authorization_code -F redirect_uri=https://mohguah.github.io/ -F code=AQB570xOH_tz6yDcCC8W39C_BPpXjLn_0AlF87YxQYMmLdrBX1zT8rVGVBiNz6Ar9EXnvhWqE4uzcLhx9AZVOPrlyiqkDUt8--vh6sioKp4lJYAIMn3Z8ETc1Bh8S-zpH3xZssGFLa1ka8X1DxIprELUtl2r8jxI6jqpI43s7dNqbfyc5SeXq7QfNJAdxrNpq82T2AK4SQb7XzTm8xdg2iFnkkUOzroDo2eZLgd5IxXK4w
+
+access token
+IGQVJYZAEcxdkNMallULV9mREdLcmpoUEFuQjNEdUJmNmpsQmpHTVJwZAldLelk5cTNaTjJWMGxiVVpjLW5RcUtyanNXbDlPM2xoQkhqMno2RzV3ZA2pWWllCeEJYOHpzNlZAMb2R0NE8tOFI0Y2hZANWp6RmJfeFY0bDdwY0s4
+"IGQVJYZAEcxdkNMallULV9mREdLcmpoUEFuQjNEdUJmNmpsQmpHTVJwZAldLelk5cTNaTjJWMGxiVVpjLW5RcUtyanNXbDlPM2xoQkhqMno2RzV3ZA2pWWllCeEJYOHpzNlZAMb2R0NE8tOFI0Y2hZANWp6RmJfeFY0bDdwY0s4"
+
+user-id
+17841456099096193
+17841456099096193
+
+curl -X GET \
+  'https://graph.instagram.com/{user-id}?fields=id,username&access_token={access-token}'
+
+curl -X GET https://graph.instagram.com/17841456099096193?fields=id,username&access_token=IGQVJYZAEcxdkNMallULV9mREdLcmpoUEFuQjNEdUJmNmpsQmpHTVJwZAldLelk5cTNaTjJWMGxiVVpjLW5RcUtyanNXbDlPM2xoQkhqMno2RzV3ZA2pWWllCeEJYOHpzNlZAMb2R0NE8tOFI0Y2hZANWp6RmJfeFY0bDdwY0s4

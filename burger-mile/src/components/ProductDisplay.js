@@ -1,6 +1,36 @@
+import { useState } from 'react';
 import './ProductDisplay.scss';
 
 const ProductDisplay = (props) => {
+
+	const [cartItems, setCartItems] = useState({});
+
+	const handleAddItem = product => {
+		const ProductExists = cartItems.find(item => item.id === product.id);
+		console.log("hello 1")
+		if (ProductExists) {
+			setCartItems(
+				cartItems.map(item =>
+					item.id === product.id
+						? { ...ProductExists, quantity: ProductExists.quantity }
+						: item
+				)
+			);
+			console.log(cartItems);
+			console.log(setCartItems);
+			console.log(ProductExists);
+		} else {
+			setCartItems([...cartItems, {
+				...product, quantity: 1
+			}]);
+			console.log(setCartItems);
+		}
+	};
+
+	console.log(setCartItems);
+	console.log(cartItems);
+
+
 	// const {id, imageUrl, name, description, price} = props
 	return (
 		<>
@@ -13,21 +43,19 @@ const ProductDisplay = (props) => {
 				<h3>{props.name}</h3>
 				<p>{props.description}</p>
 				<span>${props.price}</span>
-				<form action="/create-checkout-session" method="POST">
-					<button
-						className="stripe-add-item"
-						data-item-id={props.id}
-						data-item-image={props.imageUrl}
-						data-item-name={props.name}
-						data-item-price={props.price}
-						data-item-url="/"
-					>
-						Add to cart
-					</button>
+
+				<form>
+					<button onClick={handleAddItem} />
 				</form>
 			</div>
+		</>
+	);
+}
 
-			{/* <section>
+export default ProductDisplay
+
+
+{/* <section>
 				<div className="checkout">
 					<img
 						src="https://i.imgur.com/EHyR2nP.png"
@@ -44,8 +72,3 @@ const ProductDisplay = (props) => {
 					</button>
 				</form>
 			</section> */}
-		</>
-	);
-}
-
-export default ProductDisplay
