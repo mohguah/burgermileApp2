@@ -1,9 +1,10 @@
-import ProductDisplay from '../components/ProductDisplay';
+import Products from '../components/Cart/Products';
 import { useEffect, useState } from "react";
 import { productList } from '../assets/products.js';
 
 import './Store.scss';
 import CheckoutWithStripe from '../components/CheckoutWithStripe';
+import ShoppingCart from '../components/Cart/ShoppingCart';
 
 const Message = ({ message }) => (
 	<section>
@@ -12,6 +13,13 @@ const Message = ({ message }) => (
 );
 
 const Store = () => {
+	const [products, setProducts] = useState(productList);
+	const [cart, setCart] = useState([]);
+
+	const addItem = item => {
+		setCart([...cart, item]);
+	}
+
 	const [message, setMessage] = useState("");
 
 	useEffect(() => {
@@ -35,14 +43,21 @@ const Store = () => {
 		<div className='store-container'>
 			<div className='store-main'>
 				<div className='store-grid'>
-					{productList.map((product, i) =>
-						<ProductDisplay {...product} key={i} />)}
+					<Products
+						products={products}
+						addItem={addItem}
+					/>
+					<ShoppingCart
+						cart={cart}
+					/>
 				</div>
-				{/* <div className='cart-link'>
-					<CheckoutWithStripe />
-				</div> */}
 			</div>
 		</div>
+
+		// 		{/* <div className='store-grid'>
+		// 	{productList.map((product, i) =>
+		// 		<Products {...product} key={i} />)}
+		// </div> */}
 
 		// productList.map((product) => (
 		// 	<div key={product.id}>

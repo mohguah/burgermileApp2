@@ -16,9 +16,9 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="list" element={<ListView />} />
-          <Route path='map' element={<MapView />} />
+          {/* <Route path='map' element={<MapView />} /> */}
           <Route path="store" element={<Store />} />
-          <Route path="catering" element={<Catering />} />
+          {/* <Route path="catering" element={<Catering />} /> */}
           <Route path="about" element={<About />} />
         </Route>
       </Routes>
