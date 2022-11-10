@@ -13,10 +13,12 @@ const ShoppingCart = props => {
                 <Item key={item.id} {...item} />
             ))}
 
-            <div className="shopping-cart-checkout">
+            <form action="/create-checkout-session" method="POST">
                 <p>Total: ${getCartTotal()}</p>
-                <button>Checkout</button>
-            </div>
+                <button type="submit">
+                    Checkout
+                </button>
+            </form>
         </div>
     )
 }
