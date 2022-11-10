@@ -8,6 +8,7 @@ const ProductDisplay = (props) => {
 	const handleAddItem = product => {
 		const ProductExists = cartItems.find(item => item.id === product.id);
 		console.log("hello 1")
+
 		if (ProductExists) {
 			setCartItems(
 				cartItems.map(item =>

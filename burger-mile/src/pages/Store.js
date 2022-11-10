@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { productList } from '../assets/products.js';
 
 import './Store.scss';
+import CheckoutWithStripe from '../components/CheckoutWithStripe';
 
 const Message = ({ message }) => (
 	<section>
@@ -37,6 +38,9 @@ const Store = () => {
 					{productList.map((product, i) =>
 						<ProductDisplay {...product} key={i} />)}
 				</div>
+				{/* <div className='cart-link'>
+					<CheckoutWithStripe />
+				</div> */}
 			</div>
 		</div>
 
