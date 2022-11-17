@@ -2,6 +2,8 @@ import Item from "./ShoppingCartItem";
 
 const ShoppingCart = props => {
     const getCartTotal = () => {
+        console.log("hello")
+        console.log(props.cart)
         return props.cart.reduce((acc, value) => {
             return acc + value.price;
         }, 0).toFixed(2);
