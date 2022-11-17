@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { productList } from '../assets/products.js';
 
 import './Store.scss';
-import CheckoutWithStripe from '../components/CheckoutWithStripe';
 import ShoppingCart from '../components/Cart/ShoppingCart';
 
 const Message = ({ message }) => (

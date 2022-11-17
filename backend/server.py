@@ -33,21 +33,28 @@ price = stripe.Price.create(
 def create_checkout_session():
     try:
         checkout_session = stripe.checkout.Session.create(
+            submit_type='pay',
+            payment_method_types=['card'],
+            billing_address_collection='auto',
+            shipping_options= [
+                {'shipping_rate': 'shr_1M59tMCpUbUMkUvoAYgE3TZ9'},
+                {'shipping_rate': 'shr_1M59vkCpUbUMkUvokDkbEctJ'},
+            ],
             line_items=[
                 {
                     "price_data": {
-                        "currency": "usd",
-                        "product_data": {"name": cart.name}
+                        # "currency": "usd",
+                        # "product_data": {"name": cart.name},
                         # Provide the exact Price ID (for example, pr_1234) of the product you want to sell
-                        'price': cart.price,
+                        'price': {{PRICE_ID}},
                         'quantity': 1,
                     },
-                    "adjustable_quantity": {
-                        "enabled": True,
-                        "minimum": 1,
-                        "maximum": 10
-                    },
-                    "quantity": 1,
+                    # "adjustable_quantity": {
+                    #     "enabled": True,
+                    #     "minimum": 1,
+                    #     "maximum": 10,
+                    # },
+                    # "quantity": 1,
                 },
             ],
             mode='payment',
