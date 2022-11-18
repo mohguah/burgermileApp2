@@ -1,19 +1,19 @@
 import getStripe from "../GetStripe";
 import Item from "./ShoppingCartItem";
-import axios from '../Axios';
-import { useEffect } from "react";
+// import axios from '../Axios';
+// import { useEffect } from "react";
 
 const ShoppingCart = props => {
 
-    useEffect(() => {
-        async function fetchData() {
-            const request = await axios.get(fetchUrl);
-            console.log(request);
-            return request;
-        }
-        fetchData();
+    // useEffect(() => {
+    //     async function fetchData() {
+    //         const request = await axios.get(fetchUrl);
+    //         console.log(request);
+    //         return request;
+    //     }
+    //     fetchData();
 
-    }, [])
+    // }, [])
 
     const handleCheckout = async () => {
         const stripe = await getStripe();
@@ -53,7 +53,7 @@ const ShoppingCart = props => {
 
             <form action="/create-checkout-session" method="POST">
                 <p>Total: ${getCartTotal()}</p>
-                <button type="button">
+                <button type="submit">
                     Checkout
                 </button>
             </form>
